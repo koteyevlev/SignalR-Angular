@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SignalR_Angular.HubConfig;
 
 namespace SignalR_Angular
 {
@@ -20,7 +21,22 @@ namespace SignalR_Angular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddControllersWithViews();
+            
+            services.AddCors(options =>
+                {
+                    options.AddPolicy("AllowAllHeaders",
+                        builder =>
+                        {
+                            builder.AllowAnyOrigin()
+                                .AllowAnyHeader()
+                                .AllowAnyMethod();
+                        });
+                });
+            services.AddSignalR(options =>
+            {
+                options.EnableDetailedErrors = true;
+            });
+            services.AddControllers();
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration => { configuration.RootPath = "ClientApp/dist"; });
         }
@@ -48,11 +64,12 @@ namespace SignalR_Angular
 
             app.UseRouting();
 
+            app.UseCors("AllowAllHeaders");
+
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller}/{action=Index}/{id?}");
+                endpoints.MapControllers();
+                endpoints.MapHub<MyHub>("/toastr");
             });
 
             app.UseSpa(spa =>
