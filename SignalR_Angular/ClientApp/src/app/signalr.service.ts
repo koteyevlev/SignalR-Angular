@@ -19,19 +19,28 @@ export class SignalrService{
     this.hubconnection
       .start()
       .then(() => {
-        console.log('Hub Connection Started!')
+        console.log("Hub connection started");
+        this.askServerListener();
+        this.askServer();
       })
       .catch(err => console.log('Error while starting connection: ' + err))
   }
 
   askServerListener() {
+    console.log("Ask server Listener started");
     this.hubconnection.on("askServerResponse", (sometext) =>{
-      console.log(sometext)
+      console.log("Ask server Listener on");
+      //this.toastr.success(sometext);
     })
   }
 
-  askServer() {
-    this.hubconnection.invoke("askServer", "hi")
+  async askServer() {
+    console.log("Ask server started");
+    await this.hubconnection.invoke("askServer", "hi")
+      .then(() => {
+        console.log("Ask server invoked");
+      })
       .catch(err => console.error(err))
+    console.log("This is a final prompt");
   }
 }
