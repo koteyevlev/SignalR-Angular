@@ -2,9 +2,11 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SignalR_Angular.EFModels;
 using SignalR_Angular.HubConfig;
 
 namespace SignalR_Angular
@@ -21,7 +23,10 @@ namespace SignalR_Angular
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            
+            services.AddDbContext<SignalRContext>(options =>
+            {
+                options.UseMySQL(Configuration.GetConnectionString("MyConnection"));
+            });
             services.AddCors(options =>
                 {
                     options.AddPolicy("AllowAllHeaders",

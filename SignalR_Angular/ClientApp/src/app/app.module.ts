@@ -10,6 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { ToastrModule } from 'ngx-toastr';
+import { AuthComponent } from './auth/auth.component';
+import { Home2Component } from './home2/home2.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { ToastrModule } from 'ngx-toastr';
     NavMenuComponent,
     HomeComponent,
     CounterComponent,
-    FetchDataComponent
+    FetchDataComponent,
+    AuthComponent,
+    Home2Component
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -30,9 +34,10 @@ import { ToastrModule } from 'ngx-toastr';
       preventDuplicates: false,
     }),
     RouterModule.forRoot([
-    { path: '', component: HomeComponent, pathMatch: 'full' },
-    { path: 'counter', component: CounterComponent },
-    { path: 'fetch-data', component: FetchDataComponent },
+    { path: '', redirectTo: 'auth', pathMatch: 'full' },
+      { path: 'auth', component: AuthComponent },
+      { path: 'home2', component: Home2Component },
+      { path: '**', redirectTo: 'auth', pathMatch: 'full' }
 ], { relativeLinkResolution: 'legacy' })
   ],
   providers: [],
