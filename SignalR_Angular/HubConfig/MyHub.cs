@@ -35,7 +35,8 @@ namespace SignalR_Angular.HubConfig
                     SignalrId = currSignalId,
                     TimeStamp = DateTime.Now
                 };
-                await context.AddAsync(currUser);
+                if (context.Connections.SingleOrDefault(c => c.PersionId == tempPerson.Id) == null)
+                    await context.AddAsync(currUser);
                 await context.SaveChangesAsync();
                 await Clients.Caller.SendAsync("authMeResponseSuccess", tempPerson);
             }

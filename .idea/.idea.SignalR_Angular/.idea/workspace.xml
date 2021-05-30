@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b99f600a-7f23-43d5-b3c0-d7315761caf7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/SignalR_Angular/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR_Angular/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.SignalR_Angular/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.SignalR_Angular/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR_Angular/HubConfig/MyHub.cs" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR_Angular/HubConfig/MyHub.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SignalR_Angular/SignalR_Angular.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/SignalR_Angular/SignalR_Angular.csproj" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +25,8 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/SignalR_Angular/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/D83684DC-07EC-402D-84C3-958A9F084956/a0/c5dc20b0/Task`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/SignalR_Angular/ClientApp/package-lock.json" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/9461FF6A-F506-49CE-B105-4AD403A4E6D8/24/DefaultHubDispatcher.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
@@ -34,14 +36,15 @@
       <option value="$PROJECT_DIR$/SignalR_Angular/.gitignore" />
       <option value="$PROJECT_DIR$/SignalR_Angular/Properties/launchSettings.json" />
       <option value="$PROJECT_DIR$/SignalR_Angular/Startup.cs" />
-      <option value="$PROJECT_DIR$/SignalR_Angular/HubConfig/MyHub.cs" />
       <option value="$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/app.component.ts" />
       <option value="$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/app.module.ts" />
       <option value="$PROJECT_DIR$/SignalR_Angular/ClientApp/src/styles.css" />
       <option value="$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts" />
+      <option value="$PROJECT_DIR$/SignalR_Angular/HubConfig/MyHub.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1tCnahmIuX7OhmI8wKgP5MmUXGM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -101,13 +104,14 @@
       <option name="presentableId" value="Default" />
       <updated>1622282005037</updated>
       <workItem from="1622282017176" duration="10534000" />
+      <workItem from="1622382686862" duration="601000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -118,31 +122,26 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts</url>
           <line>22</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts</url>
           <line>38</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts</url>
           <line>41</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts</url>
           <line>30</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/SignalR_Angular/ClientApp/src/app/signalr.service.ts</url>
           <line>32</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
